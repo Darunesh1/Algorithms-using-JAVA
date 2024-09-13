@@ -5,8 +5,8 @@ public class QuickFindUF {
     public QuickFindUF(int N)
     {
         id=new int[N];
-        for (int i=0;i<N;i++)
-        {
+        for (int i=0;i<N;i++)   //setting the each index to its onwn number 
+        {                       //intiliation
             id[i]=i;
         }
     }
@@ -30,3 +30,8 @@ public class QuickFindUF {
     }
 
 }
+
+
+// not optiominal so we use quickunion a lazy approach
+
+// union is costy
