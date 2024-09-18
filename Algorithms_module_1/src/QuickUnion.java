@@ -2,6 +2,7 @@ public class QuickUnion {
 
     private int[] id;
     private int[] siz;
+    private int largest[];
 
     public QuickUnion(int N)
     {
@@ -9,6 +10,7 @@ public class QuickUnion {
         {
             id[i]=i;
             siz[i]=1;
+            largest[i]=i;
         }
     }
 
@@ -59,6 +61,13 @@ public class QuickUnion {
         else{
             id[j]=i;
             siz[i]+=siz[j];
+        }
+        if(largest[i]<largest[j])
+        {
+            largest[i]=largest[j];
+        }
+        else{
+            largest[j]=largest[i];
         }
     }
 
